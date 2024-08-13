@@ -18,11 +18,11 @@ return {
           }),
         },
         icons = {
-          passed = "🟢",
-          running = "🟡",
-          skipped = "🛞",
-          unknown = "⚪",
-          failed = "🔴",
+          passed = "✅",
+          running = "🧪",
+          skipped = "🤚",
+          unknown = "❓",
+          failed = "❌",
         },
       })
     end,
