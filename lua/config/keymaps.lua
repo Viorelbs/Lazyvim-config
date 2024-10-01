@@ -35,7 +35,7 @@ map("n", "<leader>gopl", "<cmd>Octo pr list<CR>", { desc = "Open PR list" })
 map(
   "n",
   "<leader>gopm",
-  "<cmd>Octo search is:pr review-requested:bogdan-calapod is:open draft:false<CR>",
+  "<cmd>Octo search is:pr review-requested:Viorelbs is:open draft:false<CR>",
   { desc = "Open own PR list" }
 )
 map("n", "<leader>gopc", "<cmd>Octo pr create<CR>", { desc = "Create PR" })

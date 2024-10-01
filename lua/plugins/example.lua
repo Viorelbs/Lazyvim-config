@@ -136,6 +136,7 @@ return {
         "yaml",
       },
     },
+    hightlight = { enabled = true },
   },
 
   -- since `vim.tbl_deep_extend`, can only merge tables and not lists, the code above
