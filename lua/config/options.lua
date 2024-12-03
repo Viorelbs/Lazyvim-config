@@ -3,15 +3,20 @@
 -- Add any additional options here
 
 -- Clipboard copy --
-vim.g.clipboard = {
-  name = "wslclipboard",
-  copy = {
-    ["+"] = "wsl.exe clip.exe",
-    ["*"] = "wsl.exe clip.exe",
-  },
-  paste = {
-    ["+"] = "wsl.exe powershell.exe Get-Clipboard -Raw",
-    ["*"] = "wsl.exe powershell.exe Get-Clipboard -Raw",
-  },
-  cache_enabled = 0,
-}
+-- WSL clipboard copy
+-- vim.g.clipboard = {
+--   name = "wslclipboard",
+--   copy = {
+--     ["+"] = "wsl.exe clip.exe",
+--     ["*"] = "wsl.exe clip.exe",
+--   },
+--   paste = {
+--     ["+"] = "wsl.exe powershell.exe Get-Clipboard -Raw",
+--     ["*"] = "wsl.exe powershell.exe Get-Clipboard -Raw",
+--   },
+--   cache_enabled = 0,
+-- }
+--   vim.opt.clipboard:append { 'unnamedplus' }
+
+-- MAC OS Clipboard copy --
+vim.opt.clipboard:append({ "unnamedplus" })
