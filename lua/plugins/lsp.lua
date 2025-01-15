@@ -14,6 +14,9 @@ return {
     "dgagn/diagflow.nvim",
     opts = { scope = "line" },
   },
+  {
+    "chrisbra/csv.vim",
+  },
   { -- Merge lines
     "Wansmer/treesj",
     keys = {
@@ -51,8 +54,8 @@ return {
       ui = { border = "rounded" },
       ensure_installed = {
         "bash-language-server",
-        "prettierd",
         "css-lsp",
+        "ruff-lsp",
         "pyright",
         "autopep8",
         "shellcheck",
@@ -64,19 +67,17 @@ return {
     ft = { "python", "typescript", "typescriptreact", "typescript.tsx" },
     dependencies = {
       "mfussenegger/nvim-jdtls",
-      "williamboman/mason.nvim",
     },
     config = function()
       require("sonarlint").setup({
         server = {
           cmd = {
-            "sonarlint-language-server",
+            "java",
+            "-cp",
+            "-jar",
             -- Ensure that sonarlint-language-server uses stdio channel
             "-stdio",
             "-analyzers",
-            -- paths to the analyzers you need, using those for python and java in this example
-            vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarpython.jar"),
-            vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarjs.jar"),
           },
         },
         filetypes = {
@@ -87,5 +88,14 @@ return {
         },
       })
     end,
+  },
+  {
+    "MeanderingProgrammer/markdown.nvim",
+    main = "render-markdown",
+    opts = {},
+    name = "render-markdown", -- Only needed if you have another plugin named markdown.nvim
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.nvim' }, -- if you use the mini.nvim suite
+    -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'echasnovski/mini.icons' }, -- if you use standalone mini plugins
+    dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" }, -- if you prefer nvim-web-devicons
   },
 }
