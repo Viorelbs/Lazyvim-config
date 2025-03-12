@@ -14,6 +14,7 @@ return {
     "dgagn/diagflow.nvim",
     opts = { scope = "line" },
   },
+  { "mfussenegger/nvim-jdtls" },
   {
     "chrisbra/csv.vim",
   },
@@ -34,6 +35,7 @@ return {
         "bash",
         "html",
         "javascript",
+        "java",
         "json",
         "lua",
         "markdown",
@@ -54,6 +56,7 @@ return {
       ui = { border = "rounded" },
       ensure_installed = {
         "bash-language-server",
+        "prettierd",
         "css-lsp",
         "ruff-lsp",
         "pyright",
@@ -62,6 +65,8 @@ return {
       },
     },
   },
+  { "williamboman/mason-lspconfig.nvim" },
+  { "neovim/nvim-lspconfig" },
   {
     url = "https://gitlab.com/schrieveslaach/sonarlint.nvim",
     ft = { "python", "typescript", "typescriptreact", "typescript.tsx" },
